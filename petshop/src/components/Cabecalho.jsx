@@ -13,7 +13,7 @@ const Cabecalho = () => {
                 </span>
             </div>
             <div className="cabecalho-container">
-              <Link to="/" classname="flex flex--centro">
+              <Link to="/" className="flex flex--centro">
                 <img className="cabecalho__logo" src={imagem} alt="logo doguito" />
                 <h1 className="cabecalho__titulo">PetShop</h1>
               </Link>
