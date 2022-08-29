@@ -10,6 +10,7 @@ import Post from './components/Post';
 import Categoria from './paginas/Categoria';
 
 
+
 function App() {
   const rotas = () => {
     return (
@@ -18,9 +19,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home/>} />
         <Route path="/sobre" element={<Sobre/>} />
-        <Route path="/categoria" element={<Categoria/>}>
-          <Route path="categoria/:id" element={<Route/>} />
-        </Route>
+        <Route path="/categoria/:id" element={<Categoria/>} />
+         
         <Route path="/posts/:id" element={<Post/>} />
         <Route path="/*" element={<Pagina404/>} />
       </Routes>
