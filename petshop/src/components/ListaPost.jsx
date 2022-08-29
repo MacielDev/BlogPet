@@ -5,9 +5,10 @@ import { busca } from '../api/api'
 
 const ListaPost = ( { url } ) => {
     const [posts, setPosts] = useState([]);
+   
 
     useEffect(()=>{
-       busca(url, setPosts);
+       busca(url, setPosts)
     },[url])
 
     return (

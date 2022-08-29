@@ -1,14 +1,17 @@
 import React, { useState,useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams,useNavigate } from 'react-router-dom';
 import { busca } from '../api/api';
 import '../assets/css/post.css'
 
 const Post = () => {
     const {id} = useParams()
     const[post, setPost] = useState({});
-
+    let navigate = useNavigate();
     useEffect (()=>{
         busca(`/posts/${id}`, setPost)
+        .catch(()=>{
+            navigate("/*");
+           })
     },[id])
     return (
         <main className="container flex flex--centro">
