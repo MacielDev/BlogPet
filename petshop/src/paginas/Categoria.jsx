@@ -1,5 +1,5 @@
 import React from 'react';
-import { useParams,Route, Routes, Outlet } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import '../assets/css/blog.css';
 import Listacategorias from '../components/ListaCategorias';
 import ListaPost from '../components/ListaPost';
@@ -16,8 +16,8 @@ const Categoria =() => {
             <Listacategorias />
                 
            
-                <ListaPost url={`/posts/?categoria=${id}`}/> 
-            
+                <ListaPost url={`/posts?categoria=${id}`}/> 
+                
         </>
     );
 }
